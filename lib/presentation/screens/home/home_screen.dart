@@ -40,14 +40,21 @@ class _CustomListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final colors = Theme.of(context).colorScheme;    
+    final colors = Theme.of(context).colorScheme;
+    //final navigator = Navigator.of(context); 
+
     return ListTile(
       leading: Icon(menuItem.icon, color: colors.primary), //icono inicial
       trailing: const Icon(Icons.arrow_forward_ios_rounded), //icono final
       title: Text(menuItem.title),
       subtitle: Text(menuItem.subtitle),
       onTap: (){
-        //TODO: Navegar a otra pantalla
+        /* navigator.push(
+          MaterialPageRoute(builder: (context){
+            return const Placeholder();
+          })
+        ); */
+        Navigator.pushNamed( context, menuItem.link);
       },
     );
   }
