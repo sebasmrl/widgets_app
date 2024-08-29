@@ -50,14 +50,17 @@ class _ControllerProgressIndicator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+  
     return StreamBuilder(
       stream: Stream.periodic( const Duration(milliseconds: 300), (value){
-        return (value*2)/100;
-      }).takeWhile( (value)=> value <100),
+        // ignore: avoid_print
+        print(value);
+        return { 'devolucion':(value*2)/100};
+      }).takeWhile( (value)=> (value['devolucion'] ?? 0) < 1.02),
 
       builder: (context, snapshot){ 
-
-        final progressValue = snapshot.data ?? 0;
+        final progressValue = snapshot.data?['devolucion'] ?? 0;
         return   Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Row(
@@ -75,3 +78,6 @@ class _ControllerProgressIndicator extends StatelessWidget {
     );
   }
 }
+
+
+
