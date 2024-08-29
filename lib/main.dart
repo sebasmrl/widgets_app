@@ -7,12 +7,16 @@ void main() {
   runApp(const MainApp());
 }
 
+final scaffoldKey = GlobalKey<ScaffoldMessengerState>();
+
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
-
   @override
   Widget build(BuildContext context) {
+
     return  MaterialApp.router(
+      title: 'Flutter Widgets',
+      scaffoldMessengerKey: scaffoldKey,
       routerConfig: appRouter,
       debugShowCheckedModeBanner: false,
       theme: AppTheme( selectedColor: 0).getTheme(),

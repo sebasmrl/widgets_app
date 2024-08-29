@@ -33,5 +33,11 @@ class MenuItem{
       link: '/progress', 
       icon: Icons.refresh_rounded
     ),
+    MenuItem(
+      title: 'Snackbars y dialogos', 
+      subtitle: 'Indicadores/alertas en pantalla', 
+      link: '/snackbars', 
+      icon: Icons.info_outline
+    ),
     
   ];
