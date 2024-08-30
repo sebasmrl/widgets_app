@@ -61,6 +61,10 @@ class SnackbarScreen extends StatelessWidget {
               FilledButton(onPressed: (){
                 showAboutDialog(
                   context: context, 
+                  applicationIcon: const Icon(Icons.add_photo_alternate_rounded),
+                  barrierLabel: 'Barrier Label',
+                  //barrierDismissible: false,
+                  applicationVersion: '1.0.0',
                   children: [
                     const Text('Aute veniam aliquip consequat sunt pariatur quis aliqua id irure elit est irure laborum.')
                   ]
@@ -71,7 +75,7 @@ class SnackbarScreen extends StatelessWidget {
               FilledButton(onPressed: (){
                 openDialog(context);
               }, 
-                child: const Text('MOstrar Dialogo de pantalla')
+                child: const Text('Mostrar Dialogo de pantalla')
               )
             ],
           ),),
