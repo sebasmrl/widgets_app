@@ -46,6 +46,12 @@ class MenuItem{
       icon: Icons.check_box_outlined
     ),
     MenuItem(
+      title: 'Ui Controls', 
+      subtitle: 'Controles de ui', 
+      link: '/ui-controls', 
+      icon: Icons.album_outlined
+    ),
+    MenuItem(
       title: 'Tutorial', 
       subtitle: 'Ingresar al tutorial de la aplicación', 
       link: '/tutorial', 
