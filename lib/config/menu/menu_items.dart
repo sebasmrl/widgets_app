@@ -45,5 +45,11 @@ class MenuItem{
       link: '/animated', 
       icon: Icons.check_box_outlined
     ),
+    MenuItem(
+      title: 'Tutorial', 
+      subtitle: 'Ingresar al tutorial de la aplicación', 
+      link: '/tutorial', 
+      icon: Icons.add_home_outlined
+    ),
     
   ];
