@@ -57,5 +57,11 @@ class MenuItem{
       link: '/tutorial', 
       icon: Icons.add_home_outlined
     ),
+    MenuItem(
+      title: 'Infinite Scroll y Pull Refresh', 
+      subtitle: 'Pantalla de Scroll Infinito y Pull Refresh', 
+      link: '/infinite', 
+      icon: Icons.swipe_down_alt_sharp
+    ),
     
   ];
