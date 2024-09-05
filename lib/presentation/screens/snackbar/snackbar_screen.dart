@@ -8,11 +8,13 @@ class SnackbarScreen extends StatelessWidget {
 
   void showCustomSnackbar(BuildContext context){
     ScaffoldMessenger.of(context).clearSnackBars();
+    final colors=Theme.of(context).colorScheme;
 
     final snackbar = SnackBar(
       content: const Text('Hola mundo'),
       action: SnackBarAction(label: 'Ok?', onPressed: (){} ),
       duration: const Duration(milliseconds: 500),
+      backgroundColor: colors.primary,
     );
     ScaffoldMessenger.of(context).showSnackBar( snackbar );
     //sm.showSnackBar( const SnackBar(content: Text('Hola mundo')));
